@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html >
+<head>
+    
+    <title>DOM Event Handling</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        img {
+            width: 300px;
+            height: auto;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: blue;
+            color: white;
+            border: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>DOM Manipulation with Events</h2>
+
+   
+
+    <img id="hoverImage" src="images.jpeg" onmouseover="changeText()">
+
+
+    <p id="imageText">Hover over the image to change this text.</p>
+
+ 
+    <button onclick="changeButtonText()">Click Me</button>
+    <p id="buttonText">Click the button to change this text.</p>
+
+    <script>
+        function changeText() {
+            document.getElementById("imageText").innerHTML = "You hovered over the image!";
+        }
+
+        function changeButtonText() {
+            document.getElementById("buttonText").innerHTML = "Button clicked! Text changed.";
+        }
+    </script>
+
+</body>
+</html>
